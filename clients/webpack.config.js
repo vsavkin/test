@@ -5,7 +5,7 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js']
   },
-  entry: './app.module.ts',
+  entry: './main.ts',
   output: {
     path: path.join(process.cwd(), 'dist'),
     publicPath: 'dist/',
@@ -15,8 +15,7 @@ module.exports = {
   plugins: [
     new ngtools.AotPlugin({
       tsConfigPath: './tsconfig.json',
-      skipCodeGeneration: true,
-      entryModule: './app.module.ts#AppModule'
+      mainPath: './main.ts'
     })
   ],
   module: {

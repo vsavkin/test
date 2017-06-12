@@ -17,8 +17,3 @@ export class AppModule {
     console.log("ngDoBootstrap");
   }
 }
-
-export function bootstrapPowerBiNew() {
-  console.log("bootstrapPowerBiNew is invoked");
-  platformBrowserDynamic().bootstrapModule(AppModule);
-}

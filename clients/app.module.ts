@@ -11,11 +11,14 @@ import {UpgradeModule} from '@angular/upgrade/static';
   imports: [BrowserModule, UpgradeModule]
 })
 export class AppModule {
+  // constructor(private upgrade: UpgradeModule) {}
+
   ngDoBootstrap() {
-    console.log("nothing");
+    console.log("ngDoBootstrap");
   }
 }
 
-export function bootststrapPowerBiNew() {
-  console.log(NgModule, BrowserModule, platformBrowserDynamic, "hello");
+export function bootstrapPowerBiNew() {
+  console.log("bootstrapPowerBiNew is invoked");
+  platformBrowserDynamic().bootstrapModule(AppModule);
 }

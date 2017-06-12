@@ -57819,7 +57819,7 @@ exports.tryCatch = tryCatch;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_dynamic__ = __webpack_require__(65);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_upgrade_static__ = __webpack_require__(66);
 /* harmony export (binding) */ __webpack_require__.d(exports, "AppModule", function() { return AppModule; });
-/* harmony export (immutable) */ exports["bootststrapPowerBiNew"] = bootststrapPowerBiNew;
+/* harmony export (immutable) */ exports["bootstrapPowerBiNew"] = bootstrapPowerBiNew;
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -57836,8 +57836,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var AppModule = (function () {
     function AppModule() {
     }
+    // constructor(private upgrade: UpgradeModule) {}
     AppModule.prototype.ngDoBootstrap = function () {
-        console.log("nothing");
+        console.log("ngDoBootstrap");
     };
     return AppModule;
 }());
@@ -57847,8 +57848,9 @@ AppModule = __decorate([
     })
 ], AppModule);
 
-function bootststrapPowerBiNew() {
-    console.log(__WEBPACK_IMPORTED_MODULE_3__angular_core__["A" /* NgModule */], __WEBPACK_IMPORTED_MODULE_4__angular_platform_browser__["b" /* BrowserModule */], __WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */], "hello");
+function bootstrapPowerBiNew() {
+    console.log("bootstrapPowerBiNew is invoked");
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_5__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(AppModule);
 }
 //# sourceMappingURL=/Users/vsavkin/projects/ng1ng2router/clients/app.module.js.map
 

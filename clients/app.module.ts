@@ -5,8 +5,11 @@ import 'zone.js/dist/zone';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
+import {UpgradeModule} from '@angular/upgrade/static';
 
-@NgModule({})
+@NgModule({
+  imports: [BrowserModule, UpgradeModule]
+})
 export class AppModule {
   ngDoBootstrap() {
     console.log("nothing");
